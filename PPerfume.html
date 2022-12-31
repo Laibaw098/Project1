@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<style type="text/css">
+	*
+	{
+		margin: 0;
+		padding: 0;
+		font-family: Century Gothic;
+	}
+
+	.navbar
+	{
+		background-color: black;
+		width: 100%;
+		height: 10vh;
+		position: fixed;
+	}
+	ul
+	{
+		list-style-type: none;
+		float: right;
+		margin-top: 28px;
+		margin-right: 180px;
+	}
+	ul li
+	{
+		display: inline-block;	
+	}
+
+	ul li a
+	{
+		text-decoration: none;
+		color:#fff;
+		padding: 2px 10px;
+		border: 1px solid transparent;
+		transition: 0.6s ease;
+	}
+	ul li a:hover
+	{
+		background-color: white;
+		color:#000;
+	}
+	input[type="text"]
+	{
+		width:290px;
+		height: 34px;
+		color: black;
+		outline-color: black;
+		margin-top:18px;
+		margin-left: 280px;
+	}
+	.iconbox .icon1
+	{
+	color: white;
+	width: 90px;
+	height: 40px;
+	margin-left: 1120px;
+	top: -35px;
+	font-weight: bold;
+	font-size: 24px;
+	padding: 10px;
+	letter-spacing: 20px;
+	position: relative;
+	}
+	.icon1 i:hover
+	{
+		background-color: transparent;
+		color: red;	
+	}
+	.slider
+	{
+		width: 100%;
+		height: 100vh;
+	}
+	.slide
+	{
+		width: 500%;
+		height: inherit;
+		animation: slider 20s infinite;
+		animation-delay: 0s;
+
+	}
+	.slide div
+	{
+		width: 20%;
+		height: inherit;
+		font-size: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		float: left;
+	}
+	.slide1
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('PImages/this.jpg');		
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.slide2
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('PImages/usethis.jpg');		
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;	
+
+	}
+	.slide3
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('PImages/perfume10.jpg');		
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.slide4
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('PImages/perfume11.jpg');		
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.slide5
+	{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('PImages/perfume12.jpg');		
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	h1
+	{
+		color: #fff;
+		font-size: 70px;
+	}
+	.btn
+	{
+		border:1px solid #fff;
+		padding: 10px 30px;
+		color: #fff;
+		text-decoration: none;
+		transition: 0.6s ease;
+		font-size: 20px;
+	}
+	.btn:hover
+	{
+		background-color: white;
+		color:#000;	
+	}
+	.button
+	{
+		position: absolute;
+		top: 62%;
+		left:50%;
+		transform: translate(-50%,-50%);
+	}
+	.fcontainer
+	{
+		display: flex;
+		height: 95vh;
+		align-items: center;
+		justify-content: space-around;
+		flex-flow: column wrap;
+	}
+	h2
+	{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		font-size: 40px;
+	}
+	.fitem
+	{
+		border: 2px solid black;
+		margin: 8px; 
+		width: 200px;
+		height: 200px;
+		box-shadow: 1px 1px 7px black;
+	}
+	.item1
+	{
+		background-image: url('PImages/1perfume.jpg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item2
+	{
+		background-image: url('PImages/2perfume.jpg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item3
+	{
+		background-image: url('PImages/3perfume.jpg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item4
+	{
+		background-image: url('PImages/perfume11.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item5
+	{
+		background-image: url('PImages/5perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item6
+	{
+		background-image: url('PImages/6perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item7
+	{
+		background-image: url('PImages/7perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.item8
+	{
+		background-image: url('PImages/8perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.content
+	{
+		color: #fff;
+		background:rgba(0,0,0,0.5);
+		padding: 20px;
+		box-sizing: border-box;
+		height: 100%;
+		width: 100%;
+		margin-left: 0%;
+		visibility: hidden;
+		transition: all 0.5s ease;
+	}
+	.item1:hover
+	{
+		cursor: pointer;
+	}
+	.item1:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item2:hover
+	{
+		cursor: pointer;
+	}
+	.item2:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item3:hover
+	{
+		cursor: pointer;
+	}
+	.item3:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item4:hover
+	{
+		cursor: pointer;
+	}
+	.item4:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item5:hover
+	{
+		cursor: pointer;
+	}
+	.item5:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item6:hover
+	{
+		cursor: pointer;
+	}
+	.item6:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	.item7:hover
+	{
+		cursor: pointer;
+	}
+	.item7:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		z-index: 1;
+	}
+	.item8:hover
+	{
+		cursor: pointer;
+	}
+	.item8:hover .content
+	{
+		height: 100%;
+		width: 100%;
+
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+	}
+	h4
+	{
+		text-align: center;
+	}
+	span
+	{
+		color: gray;
+	}
+	h2
+	{
+		width: 100%;
+		height: 100px;
+		font-size: 50px;
+	}
+	.thebox h2::after
+{
+	content: '';
+	width: 200px;
+	height: 5px;
+	border-radius: 3px;
+	background:black;
+	position: absolute;
+	bottom: -107px;
+	left: 50%;
+	transform: translate(-50%);
+}
+	.saleheading 
+	{
+		margin-top: 10px;
+		margin-left: 20px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		padding: 30px;
+	}
+
+	.salebox
+	{
+		display: flex;
+		padding: 40px;
+		height: 70vh;
+		width: auto;
+		align-items: center;
+		justify-content: space-between;
+		flex-flow: column wrap;
+	}
+	.sbox
+	{
+		border: 2px solid black;
+		margin: 8px; 
+		padding: -10px;
+		width: 350px;
+		height: 350px;
+		box-shadow: 1px 1px 7px black;
+
+	}
+	.box1
+	{
+		background-image: url('PImages/12perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.box2
+	{
+		background-image: url('PImages/11perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.box3
+	{
+		background-image: url('PImages/16perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	h5
+	{
+		font-size: 42px;
+		margin-top: 10px;	
+		margin-left: 20px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		padding: 20px;
+		animation-iteration-count: infinite;
+		animation-duration: 0.9s;
+	}
+	h5::after
+	{
+	content: '';
+	width: 200px;
+	height: 5px;
+	border-radius: 3px;
+	background:black;
+	position: absolute;
+	bottom: -885px;
+	left: 50%;
+	transform: translate(-50%);
+	}
+	.salebox
+	{
+		display: flex;
+		padding: 40px;
+		height: 65vh;
+		width: auto;
+		align-items: center;
+		justify-content: space-between;
+		flex-flow: column wrap;
+	}
+	.sbox
+	{
+		border: 2px solid black;
+		margin: 8px; 
+		padding: -10px;
+		width: 350px;
+		height: 350px;
+		box-shadow: 1px 1px 7px black;
+
+	}
+	.box1
+	{
+		background-image: url('PImages/12perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.box2
+	{
+		background-image: url('PImages/11perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.box3
+	{
+		background-image: url('PImages/16perfume.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-color: white;
+	}
+	.saleheading1
+	{
+		color:white;
+		display: flex;
+		padding-top: 5px;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+	}
+	.saleheading2
+	{
+		color: white;
+		padding-top:-10px;
+		font-weight: bold;
+		font-size: 80px;
+	}
+	.saleheading3
+	{
+		color: white;
+		font-size: 20px;
+	}
+	.salecontent
+	{
+		background-color: #fff;
+		background:rgba(0,0,0,0.5);
+		height: 90%;
+		width: 90%;
+		text-align: center;
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+	.salecontent:hover
+	{
+		visibility: hidden;
+		width: 100%;
+		height: 100%;
+	}
+	.box1:hover
+	{
+	background-image: url('PImages/12perfume.jpg');
+	background-size: 130%;
+	}
+	.box2:hover
+	{
+	background-image: url('PImages/11perfume.jpg');
+	background-size: 210%;
+	}
+	.box3:hover
+	{
+	background-image: url('PImages/16perfume.jpg');
+	background-size: 210%;
+	}
+
+	.btnsale
+	{
+		border:2px solid black;
+		border-radius: 100px;
+		padding: 6px 30px;
+		color: black;
+		text-decoration: none;
+		transition: 0.6s ease;
+		font-size: 20px;
+		margin-top: -10px;
+	}
+	.btnsale:hover
+	{
+		background-color: black;
+		color:white;	
+	}
+	.mheading
+	{
+		display: flex;
+		align-items: flex-start;
+		padding: 15px;
+		margin-left: 43px;
+		margin-bottom: -20px;
+		padding-top: 30px;
+		color: black;
+		font-size: 35px;
+	}
+
+	.mancontainer
+	{
+		display: flex;
+		height: 90vh;
+		padding: 0px;
+		margin: 0px;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column wrap;
+		flex-wrap: wrap;
+
+	}
+	.mitem
+	{
+		background-color: white;
+		border: 2px solid white;
+		margin:-100px; 
+		width: 140px;
+		height:130px;
+		margin-top: -25px;
+		margin-bottom: 116px;
+		margin-right: 20px;
+		box-shadow: 1px 1px 7px black;
+	}
+	.theman
+	{
+		width: 300px;
+		height: 430px;
+		padding-top: 0px;
+		margin-bottom: 68px;
+		margin-left: 5px;
+		background-image: url('PImages/theman.png');
+		background-size: 150%;
+		background-position: center;
+		background-repeat: no-repeat;
+		box-shadow: 1px 1px 7px black;
+		border: 2px solid black;
+	}
+	.mheadings
+	{
+		margin-top: -60px;
+		text-align: center;	
+	}
+
+	.mitem1
+	{
+		background-image: url('PImages/11man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.mitem2
+	{
+		background-image: url('PImages/1man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem3
+	{
+		background-image: url('PImages/2man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem4
+	{
+		background-image: url('PImages/3man.jpg');
+		background-size: 130%;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}.mitem5
+	{
+		background-image: url('PImages/4man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem6
+	{
+		background-image: url('PImages/5man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem7
+	{
+		background-image: url('PImages/10man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem8
+	{
+		background-image: url('PImages/7man.jpg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem9
+	{
+		background-image: url('PImages/8man.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.mitem10
+	{
+		background-image: url('PImages/9man.jpg');
+		background-size: 110%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.content123
+	{
+		color: #fff;
+		background:black;
+		padding: 20px;
+		box-sizing: border-box;
+		height: 20px;
+		width: 129px;
+		visibility: hidden;
+		transition: 0.1s ease;
+		text-align: center;
+		margin-top: 40px;
+		margin-right: 20px;
+		margin-left: 7px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.mitem1:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}
+	.mitem2:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem3:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem4:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem5:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem6:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem7:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem8:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem9:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.mitem10:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}
+
+	.wheading
+	{
+		display: flex;
+		align-items: flex-start;
+		padding: 15px;
+		margin-left: 43px;
+		margin-bottom: -20px;
+		margin-top:-50px;
+		color: black;
+		font-size: 35px;
+	}
+
+	.womancontainer
+	{
+		display: flex;
+		height: 90vh;
+		padding: 0px;
+		margin: 0px;
+		align-items: center;
+		justify-content: center;
+		flex-flow: column wrap;
+	}
+
+	.witem
+	{
+		background-color: white;
+		border: 2px solid white;
+		margin:-100px; 
+		width: 140px;
+		height:130px;
+		margin-top: -25px;
+		margin-bottom: 116px;
+		margin-right: 20px;
+		box-shadow: 1px 1px 7px black;
+	}
+
+	.thewoman
+	{
+		width: 300px;
+		height: 430px;
+		padding-top: 0px;
+		margin-bottom: 68px;
+		margin-left: 5px;
+		background-image: url('PImages/thegirll.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		box-shadow: 1px 1px 7px black;
+		border: 2px solid black;
+	}
+
+	.wheadings
+	{
+		margin-top: -70px;
+		text-align: center;	
+	}
+
+	.witem1
+	{
+		background-image: url('PImages/girl1.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.witem2
+	{
+		background-image: url('PImages/girl3.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem3
+	{
+		background-image: url('PImages/girl4.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem4
+	{
+		background-image: url('PImages/girl5.png');
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}.witem5
+	{
+		background-image: url('PImages/girl6.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem6
+	{
+		background-image: url('PImages/girl7.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem7
+	{
+		background-image: url('PImages/girl8.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem8
+	{
+		background-image: url('PImages/girl9.jpg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem9
+	{
+		background-image: url('PImages/girl14.jpeg');
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}.witem10
+	{
+		background-image: url('PImages/girl13.jpg');
+		background-size: 110%;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.witem1:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}
+	.witem2:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem3:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem4:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem5:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem6:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem7:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem8:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem9:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}.witem10:hover .content123
+	{
+		background:rgba(0,0,0,0.5);
+		visibility: visible;
+		cursor: pointer;
+	}
+
+	.redbox
+	{
+		height: 15vh;
+		width: 100%;
+		background-color: #db3340;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid white;
+	}
+	.rbox
+	{
+		width: 400px;
+		height: 15vh;
+		margin: 15px;
+
+	}
+	.fa-solid.fa-certificate
+	{
+		color: white;
+		font-size: 48px;
+		margin-top: 27px;
+	}
+	.fa-solid.fa-truck-fast
+	{
+		color: white;
+		font-size: 48px;
+		margin-top: 27px;
+	}
+	.fa-solid.fa-phone-volume
+	{
+		color: white;
+		font-size: 48px;
+		margin-top: 27px;
+	}
+
+	.fa-solid.fa-boxes-packing
+	{
+		color: white;
+		font-size: 48px;
+		margin-top: 27px;
+	}
+	.hr1
+	{
+		margin-left:60px;
+		margin-top: -48px;
+		color: white;
+	}
+	.hr2
+	{
+		margin-left: 68px;
+		margin-top: -10px;
+		color: white;
+		font-size: 10px;
+	}
+
+	.lastpart
+	{
+		width: 100%;
+		height: 35vh;
+		background-color: #24262b;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.lpart
+	{
+		width: 380px;
+		height: 35vh;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.lpart2
+	{
+		display: flex;
+		flex-grow: 1;
+	}
+	.lpartheading
+	{
+		font-size: 15px;
+		font-weight: normal;
+		text-align: center;
+		margin-top:-130px;
+		margin-left: 60px;
+		margin: 20px;
+		transition: .5s ease;
+	}
+
+
+	
+	
+	/*@keyframes slider
+	{
+		0%
+		{
+			margin-left: 0;
+		}
+		10%
+		{
+			margin-left: 0;
+		}
+		12%
+		{
+			margin-left: -100%;
+		}
+		22%
+		{
+			margin-left: -100%;
+		}
+		24%
+		{
+			margin-left: -200%;
+		}
+		34%
+		{
+			margin-left: -200%;
+		}
+		36%
+		{
+			margin-left: -300%;
+		}
+
+		46%
+		{
+			margin-left: -300%;
+		}
+		48%
+		{
+			margin-left: -400%;
+		}
+		50%
+		{
+			margin-left: -400%;
+		}
+		60%
+		{
+			margin-left: -300%;
+		}
+		70%
+		{
+			margin-left: -300%;
+		}
+		72%
+		{
+			margin-left: -200%
+		}
+		82%
+		{
+			margin-left: -200%;
+		}
+		84%
+		{
+			margin-left: -100%;
+		}
+		94%
+		{
+			margin-left: -100%;
+		}
+		96%
+		{
+			margin-left: 0%;
+		}
+		100%
+		{
+			margin-left: 0%;
+		}
+
+	}*/
+	
+	</style>
+<body>
+
+	<div class="navbar">
+		<input type="text" placeholder="   Search for products"/>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Men</a></li>
+			<li><a href="#">Women</a></li>
+			<li><a href="#">Gift Sets</a></li>
+			<li><a href="#">Brands</a></li>			
+			<li><a href="#">Contact Us</a></li><br>
+		</ul>
+		<div class="iconbox">
+			<a href="#" class="icon1">
+				<i class="fas fa-heart"></i><i class="fas fa-shopping-cart"></i>
+			</a>
+		</div>
+	</div>
+
+
+<div class="slider">
+	<div class="slide">
+		<div class="slide1"><h1> PAREES PERFUMES </h1>
+			<div class="button">
+				<a href="#" class="btn">SHOP NOW</a>
+				<a href="#" class="btn">LEARN MORE</a>
+			</div>
+		</div>
+		<div class="slide2"><h1> PAREES PERFUMES </h1></div>
+		<div class="slide3"><h1> PAREES PERFUMES </h1></div>
+		<div class="slide4"><h1> PAREES PERFUMES </h1></div>
+		<div class="slide5"><h1> PAREES PERFUMES </h1></div>
+	</div>
+</div>
+
+<div class="thebox"><h2> NEW ARRIVAL </h2></div>
+
+<div class="fcontainer">
+	<div class="fitem item1">
+		<div class="content">
+			<h3> Perfume 1 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+	
+	<div class="fitem item2">
+		<div class="content">
+			<h3> Perfume 2 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+	
+	<div class="fitem item3">
+		<div class="content">
+			<h3> Perfume 3 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+	
+	<div class="fitem item4">
+		<div class="content">
+			<h3> Perfume 4 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+
+	<div class="fitem item5">
+		<div class="content">
+			<h3> Perfume5 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+	
+	<div class="fitem item6">
+		<div class="content">
+			<h3> Perfume 6  </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+	
+	<div class="fitem item7">
+		<div class="content">
+			<h3> Perfume 7 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+
+	<div class="fitem item8">
+		<div class="content">
+			<h3> Perfume 8 </h3><br>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing. </p>	
+		</div>
+		<br><h4>Emper Memories Women Perfume 100ml</h4>
+		<h4><span><s> Rs.14,000 </s></span> Rs.10,000 </h4>
+	</div>
+</div>
+
+<br><h5 class="animate__animated animate__flash"> YEAR END SALE 	</h5>
+
+<div class="salebox">
+	<div class="sbox box1">
+		<div class="salecontent">
+			<h2 class="saleheading1"> SALE UPTO </h2>
+			<h3 class="saleheading2"> 50% </h3>
+			<h2 class="saleheading3"> Perfumes <br> & <br> Body Spray </h2>
+		</div>
+	</div>
+	<button class="btnsale">SHOP NOW</button>
+	
+	<div class="sbox box2">
+	<div class="salecontent">
+			<h2 class="saleheading1"> SALE UPTO </h2>
+			<h3 class="saleheading2"> 70% </h3>
+			<h2 class="saleheading3"> Perfumes <br> & <br> Body Spray </h2>
+		</div>
+	</div>
+	<button class="btnsale">SHOP NOW</button>	
+	
+	<div class="sbox box3">
+		<div class="salecontent">
+			<h2 class="saleheading1"> SALE UPTO </h2>
+			<h3 class="saleheading2"> 30% </h3>
+			<h2 class="saleheading3"> Perfumes <br> & <br> Body Spray </h2>
+		</div>
+	</div>
+	<button class="btnsale">SHOP NOW</button>
+</div>
+
+<h1 class="mheading">MOST POPULAR FOR MAN</h1>
+<div class="mancontainer">
+
+	<div class="theman"></div>
+
+
+	<div class="mitem mitem1">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="mitem mitem2">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+
+	</div>
+	<div class="mitem mitem3">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+
+	</div>
+	<div class="mitem mitem4">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+
+	</div>
+	<div class="mitem mitem5">	
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+
+	<div class="mitem mitem6">	
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="mitem mitem7">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>		
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="mitem mitem8">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>		
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="mitem mitem9">	
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="mitem mitem10">		
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="mheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+
+</div>
+
+<h1 class="wheading">MOST POPULAR FOR WOMAN</h1>
+<div class="womancontainer">
+
+	<div class="thewoman"></div>
+
+
+	<div class="witem witem1">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem2">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem3">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem4">
+		<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem5">	
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem6">
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>		
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem7">
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>		
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem8">	
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem9">
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>		
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+	<div class="witem witem10">	
+	<div class="content123">
+			<i class="fa-solid fa-shopping-cart"></i><br>
+		</div>	
+		<br><br><br><br><br><br><h4 class="wheadings">Emper Memories Women Perfume <br>Rs.10,000 </h4>
+	</div>
+
+</div>
+
+<div class="redbox">
+	<div class="rbox rbox1">
+		<i class="fa-solid fa-certificate"></i>	
+		<h4 class="hr1">100% ORIGINAL</h4>
+		<h5 class="hr2">100% Original Products Guaranteed</h5>
+	</div>
+	<div class="rbox rbox2">
+		<i class="fa-solid fa-truck-fast"></i>
+		<h4 class="hr1">Quality Guaranty</h4>
+		<h5 class="hr2">100% Guaranteed Products</h5>
+	</div>
+	<div class="rbox rbox3">
+		<i class="fa-solid fa-phone-volume"></i>
+		<h4 class="hr1">SUPPORT 24/7</h4>
+		<h5 class="hr2">Always available for queries</h5>
+	</div>
+	<div class="rbox rbox4">
+		<i class="fa-solid fa-boxes-packing"></i>
+		<h4 class="hr1">FREE RETURNS</h4>
+		<h5 class="hr2">Free return or exchange</h5>
+	</div>
+</div>
+
+<div class="lastpart">
+	<div class="lpart lpart1">
+		<h4 class="lpartheading">USEFUL LINKS <br><br> About <br> Services <br> Contact <br> Shop <br> Blog</h4>
+	</div>
+	<div class="lpart lpart2">
+		<h4 class="lpartheading">GET HELP <br><br> FAQ <br> Shipping <br> Returns <br> Order Status <br> Payment Options</h4>
+	</div>
+	<div class="lpart lpart3">
+		<h4 class="lpartheading">CONTACT <br><br> 123,XYZ Road BLK1 <br> Karachi, Pakistan </h4>
+	</div>
+</div>
+
+</body>
+</html>,
